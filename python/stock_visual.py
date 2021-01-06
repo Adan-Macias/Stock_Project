@@ -89,7 +89,7 @@ def global_Visuals():
 
         # Iterate multiple sheets in target excel file.
         for sheet in stock_data2.sheet_names:
-                df = pd.read_excel('/Users/melen/Desktop/PORTFOLIO/Stock_Project/Data/Stock_YTS.xlsx', sheet_name=sheet)
+                df = pd.read_excel('YOUR PATH/Data/Stock_YTS.xlsx', sheet_name=sheet)
                 # Filtering all sheets by specific timespan usng dataframe
                 filter = df[(df.DATE >= '2020-01-31')]
                 filter = filter.sort_values(by=['DATE'])
