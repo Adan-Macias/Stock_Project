@@ -10,9 +10,9 @@ import mplfinance as mpf
 # Visuals dumped into Data Visual folder after every iteration.
 def mpf_Candlestick():
         #INPUT
-        excel_file = "/Users/melen/Desktop/PORTFOLIO/Stock_Project/Data/Stock_YTS.xlsx"
+        excel_file = "YOUR PATH/Stock_YTS.xlsx"
         #Stock INPUT
-        file = open('C:/Users/melen/Desktop/PORTFOLIO/Stock_Project/stocks/stocks.txt', 'r')
+        file = open('YOUR PATH/stocks.txt', 'r')
         #Produce data visuals for desired stocks
         for stock in file:
                 # Parse Stock Symbols
@@ -55,12 +55,12 @@ def mpf_Candlestick():
                         volume=True, tight_layout=True,
                         title='['+stock+']'+ 'Monthly Time Series',
                         style=s, xrotation=20,
-                        savefig='C:/Users/melen/Desktop/PORTFOLIO/Stock_Project/Data_Visuals/candlesticks/'+stock+'.png')
+                        savefig='YOUR PATH/'+stock+'.png')
 
 # Generates Sub2Grid visual layout to merge Open, High, Low, Close, and Volume charts
 def global_Visuals():
         # INPUT
-        stock_data2 = pd.ExcelFile("/Users/melen/Desktop/PORTFOLIO/Stock_Project/Data/Stock_YTS.xlsx")
+        stock_data2 = pd.ExcelFile("YOUR PATH/Stock_YTS.xlsx")
         # Dataframe used for stock iteration
         df = pd.DataFrame()
 
@@ -107,7 +107,7 @@ def global_Visuals():
 
         # Display/Save Visuals
         plt.subplots_adjust(hspace = .1)
-        plt.savefig('C:/Users/melen/Desktop/PORTFOLIO/Stock_Project/Data_Visuals/monthly_ts/monthly_series.png')
+        plt.savefig('YOUR PATH/monthly_series.png')
          
 def main():
         # Invoke Functions
