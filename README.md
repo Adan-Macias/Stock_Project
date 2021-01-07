@@ -36,13 +36,13 @@
 - Provides data visual on price movement on 4 different proces such as OHLC (open, high, low, close).
 - A sub chart is also provided which plots monthly volume data from time from 2019 - 2020.
 - This process is iterated which each stock symbol in stock.txt and dumps data visuals into desired direcory.
-![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/candlesticks/MSFT.png)
-![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/candlesticks/AMZN.png)
+![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/candles/MSFT.png)
+![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/candles/AMZN.png)
 
 # DATA VISUALIZATION #2: Line Plot Data 
 - This figure is composed of mutliple sub charts and plots OHLC data as per stock symbol.
 - All charts share the X-axis and provides changes in prices for each symbol.
 - Patterns and changes can be easily found on target stocks and provides easier comparisons between symbols, prices, and volumes.
-![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/monthly_ts/monthly_series.png)
+![](https://raw.githubusercontent.com/Adan-Macias/Stock_Project/master/Data_Visuals/monthly_series/monthly_series.png)
 
 
