@@ -9,14 +9,14 @@ import time
 
 # Request and retrieve response using API to access JSON data from aplhavantage website.
 def QE_API(yourStock):
-    stockURL = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol='+yourStock+'&apikey=9E7XZNUEVXDRM1HQ'
+    stockURL = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol='+yourStock+'&apikey=YOUR API KEY'
     connection = urllib.request.urlopen(stockURL)
     responseString = connection.read().decode()
     return responseString
 
 # Request and retrieve response using API to access JSON data from aplhavantage website.
 def TS_Monthly_API(yourStock):
-    stockURL = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol='+yourStock+'&apikey=9E7XZNUEVXDRM1HQ'
+    stockURL = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol='+yourStock+'&apikey=YOUR API KEY'
     connection = urllib.request.urlopen(stockURL)
     responseString = connection.read().decode()
     return responseString
@@ -35,8 +35,8 @@ def Time_Series_Monthly():
     stockPrices = []
 
     # INPUT 
-    file = open('C:/Users/melen/Desktop/Stock_Repo/stocks/stocks.txt', 'r')
-    dataToExcel = pd.ExcelWriter("C:/Users/melen/Desktop/Stock_Repo/Data/Stock_YTS.xlsx", engine='xlsxwriter')
+    file = open('YOUR PATH/stocks/stocks.txt', 'r')
+    dataToExcel = pd.ExcelWriter("YOUR PATH/Data/Stock_YTS.xlsx", engine='xlsxwriter')
 
     # Algorithm for striping stock symbols from txt file and inserting into API functions.
     for stock in file:
@@ -82,7 +82,7 @@ def QEndpoint():
     cpList = []
 
     # INPUT
-    file = open('C:/Users/melen/Desktop/Stock_Repo/stocks/stocks.txt', 'r')
+    file = open('YOUR PATH/stocks/stocks.txt', 'r')
     for stock in file:
         #Parse Stock Symbols
         stock = stock.strip()
@@ -129,7 +129,7 @@ def QEndpoint():
     data = pd.DataFrame({'SYMBOL': symbolList,'OPEN': openList,'HIGH': highList,'LOW': lowList, 'PRICE': priceList,
         'VOLUME': volumeList, 'LATEST TRADING DAY': ltdList, 'PREVIOUS CLOSE': pcList, 
         'CHANGE': changeList, 'CHANGE %': cpList})        
-    dataToExcel = pd.ExcelWriter("C:/Users/melen/Desktop/Stock_Repo/Data/Stock_Global.xlsx", engine='xlsxwriter')
+    dataToExcel = pd.ExcelWriter("YOUR PATH/Data/Stock_Global.xlsx", engine='xlsxwriter')
     data.to_excel(dataToExcel, sheet_name='Stock-Global', index=False)
     dataToExcel.save()
     file.close()
