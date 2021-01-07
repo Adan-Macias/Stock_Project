@@ -12,9 +12,9 @@
 
 # Data Extraction:
 ### Quote Endpoint API: Attributes 
-- **SYMBOL|OPEN|HIGH|LOW|PRICE|VOLUME|LATEST TRADING DAY|PREVIOUS CLOSE|CHANGE|CHANGE%**
+  - *SYMBOL|OPEN|HIGH|LOW|PRICE|VOLUME|LATEST TRADING DAY|PREVIOUS CLOSE|CHANGE|CHANGE%*
 ### Monthly Time Series API: Attributes 
-- **DATE|OPEN|HIGH|LOW|CLOSE|VOLUME**
+  - *DATE|OPEN|HIGH|LOW|CLOSE|VOLUME*
 ### Alpha Vantage API Restrictions: *This project follows API requests per minute ad includes 60sec timer between API function invocation.*
 
 # SQL Query/Dataframe Filtering Process: 
