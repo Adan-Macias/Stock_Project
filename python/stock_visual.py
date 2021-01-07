@@ -10,9 +10,9 @@ import mplfinance as mpf
 # Visuals dumped into Data Visual folder after every iteration.
 def mpf_Candlestick():
         #INPUT
-        excel_file = "C:/Users/melen/Desktop/Stock_Repo/Data/Stock_YTS.xlsx"
+        excel_file = "YOUR PATH/Data/Stock_YTS.xlsx"
         #Stock INPUT
-        file = open('C:/Users/melen/Desktop/Stock_Repo/stocks/stocks.txt', 'r')
+        file = open('YOUR PATH/stocks/stocks.txt', 'r')
         #Produce data visuals for desired stocks
         for stock in file:
                 # Parse Stock Symbols
@@ -55,12 +55,12 @@ def mpf_Candlestick():
                         volume=True, tight_layout=True,
                         title='['+stock+']'+ 'Monthly Time Series',
                         style=s, xrotation=20,
-                        savefig='C:/Users/melen/Desktop/Stock_Repo/Data_Visuals/candles/'+stock+'.png')
+                        savefig='YOUR PATH/Data_Visuals/candles/'+stock+'.png')
 
 # Generates Sub2Grid visual layout to merge Open, High, Low, Close, and Volume charts
 def global_Visuals():
         # INPUT
-        stock_data2 = pd.ExcelFile("C:/Users/melen/Desktop/Stock_Repo/Data/Stock_YTS.xlsx")
+        stock_data2 = pd.ExcelFile("YOUR PATH/Data/Stock_YTS.xlsx")
         # Dataframe used for stock iteration
         df = pd.DataFrame()
 
@@ -89,7 +89,7 @@ def global_Visuals():
 
         # Iterate multiple sheets in target excel file.
         for sheet in stock_data2.sheet_names:
-                df = pd.read_excel('C:/Users/melen/Desktop/Stock_Repo/Data/Stock_YTS.xlsx', sheet_name=sheet)
+                df = pd.read_excel('YOUR PATH/Data/Stock_YTS.xlsx', sheet_name=sheet)
                 # Filtering all sheets by specific timespan usng dataframe
                 filter = df[(df.DATE >= '2020-01-31')]
                 filter = filter.sort_values(by=['DATE'])
@@ -107,7 +107,7 @@ def global_Visuals():
 
         # Display/Save Visuals
         plt.subplots_adjust(hspace = .1)
-        plt.savefig('C:/Users/melen/Desktop/Stock_Repo/Data_Visuals/monthly_series/monthly_series.png')
+        plt.savefig('YOUR PATH/monthly_series.png')
          
 def main():
         # Invoke Functions
